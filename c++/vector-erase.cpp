@@ -7,8 +7,9 @@ using namespace std;
 
 
 int main() {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
-    int i,j,n;
+    int i,j, n;
+    int remove,start,end;
+    
     vector <int> vi;
     cin >> n;
     
@@ -17,11 +18,17 @@ int main() {
         vi.push_back(i);
     }
     
-    sort(vi.begin(),vi.end());
+    cin >> remove;
+    cin >> start >> end;
     
-    for (j=0;j<n;j++) {
+    vi.erase(vi.begin()+remove-1);
+    vi.erase(vi.begin()+start-1,vi.begin()+end-1);
+
+    cout << vi.size() << "\n";
+    
+    for (j=0;j<vi.size();j++) {
         cout << vi[j] << " ";
     }
-    
+
     return 0;
 }
