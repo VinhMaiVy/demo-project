@@ -7,5 +7,6 @@ def factorial (n)
 end
 
 n = gets.to_i
-
 puts factorial (n)
+
+puts factorial (10)
