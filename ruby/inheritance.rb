@@ -19,7 +19,7 @@ class Student <Person
     def initialize(firstName, lastName, id, scores)
 		super(firstName, lastName, id)
 		@scores = scores
-	end
+    end
     
     def calculate
         sum = 0
@@ -41,7 +41,7 @@ input = gets.split()
 firstName = input[0]
 lastName = input[1]
 id = input[2].to_i
-numScores = gets.to_i
+gets.to_i
 scores = gets.split()
 
 s = Student.new(firstName, lastName, id, scores)
